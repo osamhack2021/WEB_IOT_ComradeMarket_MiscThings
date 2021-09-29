@@ -42,14 +42,35 @@
 ## 기능 설명
  - 설명 기입
 
+ <p align="center"><img src="/image/OSAM-function.png"></p>
+
 ## 서비스 & 기능 플로우 차트
  - 설명 기입
+
+<p align="center"><img src="/image/OSAM-WEB.png"></p>
+
+<p align="center"><img src="/image/OSAM-IOT.png"></p>
+
+<p align="center"><img src="/image/OSAM-platform.png"></p>
+
  
 ## 전우장터 기대효과
- - 설명 기입
+**"군 내에서 안전하게 마음 놓고 거래할 수 있는 플랫폼을 만들자!"**
+
+### 경제적 효과
+
+### 부대 내,외 연결 & 소통 공간 조성 효과
+
+### 비대면 거래를 통한 코로나 예방
+
 
 ## 전우장터 경쟁력
- - 설명 기입
+
+### 안전한 중고거래
+
+### 개발문서 & 설계의 구체성
+
+### 보관함 및 플랫폼의 활용 가능성
 
 ## 팀 소개 & 개발자 소개
 - 전우장터
