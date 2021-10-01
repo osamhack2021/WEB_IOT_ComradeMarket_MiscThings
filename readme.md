@@ -90,7 +90,7 @@
  -  UI framework
 
 ### Server(back-end)
- - Nginx, PHP, Mysql, Docker 
+ - Apache2, PHP, Mysql, Docker 
 
 
 ## 서비스 이용방법 (For User)
