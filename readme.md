@@ -106,7 +106,7 @@ $ yarn start or npm run start
 
 ## 팀 정보 (Team Information)
 - 이창엽 (lcy606@naver.com), Github Id: YeoPEVA
-- 이진우 (solrukas@kakao.com), Github Id: solrukas
+- 이진우 (solrukas@kakao.com), Github Id: Solrukas
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
