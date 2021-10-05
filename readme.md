@@ -40,13 +40,9 @@
 
 
 ## 기능 설명
- - 설명 기입
-
  <p align="center"><img src="/image/OSAM-function.png"></p>
 
 ## 서비스 & 기능 플로우 차트
- - 설명 기입
-
 <p align="center"><img src="/image/OSAM-WEB.png"></p>
 
 <p align="center"><img src="/image/OSAM-IOT.png"></p>
