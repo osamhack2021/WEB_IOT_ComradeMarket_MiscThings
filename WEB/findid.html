@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>전우장터 - FindID</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+</head>
+
+<body>
+	<!-- Header -->
+	<header id="header"></header>
+
+
+    <!-- Start Contact -->
+    <div class="container py-3">
+        <section class="bg-success py-3">
+            <div class="container">
+                <div class="row align-items-center py-3">
+                    <div class="col-md-8 text-white">
+                        <h1>전우장터</h1>
+                        <p>
+                            군 내 중고거래 플랫폼, 전우장터에 오신걸 환영합니다. <br><br>
+                            <br><br>
+                            전우장터는 생활을 하는 장병 및 군무원, 간부를 대상으로 중고거래 플랫폼을 제공하고 판매 물건을 보관할 수 있는 보관함을 제공하는 웹 & IOT 프로젝트이며, 거래하시는 분들이 마음 놓고 거래할 수 있는 안전한 플랫폼을 제작하기 위해 더욱 노력하겠습니다. 
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="assets/img/about-hero.svg" alt="About Hero">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="row py-5">
+            <form class="col-md-9 m-auto" method="post" role="form" action="member/find_id.do.php">
+                <div class="mb-3">
+                    <label for="inputsubject">이름</label>
+                    <input type="text" class="form-control mt-1" id="name" name="name" placeholder="성함">
+                </div>
+                <div class="mb-3">
+                    <label for="inputmessage">군번</label>
+                    <input type="text" class="form-control mt-1" id="serialnumber" name="serialnumber" placeholder="군번">
+                </div>
+                <div class="col d-grid">
+                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="submit">아이디 확인</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- End Contact -->
+
+	<!-- Footer -->
+	<footer id="footer"></footer>
+
+
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/templatemo.js"></script>
+<script src="assets/js/custom.js"></script>
+<script type="text/javascript">
+	//헤더 모듈화
+	$(document).ready(function(){
+		$("#header").load("/header.php")
+	});
+	//푸터 모듈화
+	$(document).ready(function(){
+		$("#footer").load("/footer.php")
+	});
+</script>
+</body>
+
+</html>

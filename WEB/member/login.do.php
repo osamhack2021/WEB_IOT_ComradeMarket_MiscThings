@@ -16,7 +16,7 @@
 
     if(isset($_SESSION['login_session'])){
         alert("이미 로그인하셨습니다.");
-        redirect("../index.html");
+        redirect("../index.php");
     }else{
         // id와 password를 post로 받아옴
         $id = $_POST['ID'];

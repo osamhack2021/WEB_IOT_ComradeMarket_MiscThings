@@ -16,5 +16,5 @@
     alert("성공적으로 로그아웃되었습니다.");
 
     // Do not response with history.back(-1);
-    redirect("../index.html");
+    redirect("../index.php");
 ?>
