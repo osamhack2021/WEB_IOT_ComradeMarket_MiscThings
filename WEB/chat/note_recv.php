@@ -28,10 +28,7 @@ if(!isset($_SESSION['login_session'])){
     </thead>
 
     <?php
-    //recv_note 받은쪽지함 데이터 가져오기
-    //recv_note테이블에서 recv_id가 세션userid와 같은것만 가져오기
       $query = "select * from note where recv_id = '".$_SESSION['id']."' and r_del not in('1') order by idx desc";
-      //recv_id = '".$_SESSION['id']."'
       $sql = mysqli_query($db,$query);
       while($recv = $sql->fetch_array()){
       $note_title=$recv["title"]; 
@@ -43,10 +40,10 @@ if(!isset($_SESSION['login_session'])){
 
         <tbody>
           <tr>
-            <td class="tc"><input type="checkbox" /></td> <!---체크박스 -->
-            <td><?php echo $recv['send_id'];?></td> <!---보낸이 -->
-            <td><a href='read.php?idx=<?php echo $recv['idx']; ?>'><?php echo $note_title; ?></a></td> <!---제목 -->
-            <td class="tc"><?php echo $recv['send_date']; ?></td> <!---보낸시간 -->
+            <td class="tc"><input type="checkbox" /></td>
+            <td><?php echo $recv['send_id'];?></td>
+            <td><a href='read.php?idx=<?php echo $recv['idx']; ?>'><?php echo $note_title; ?></a></td>
+            <td class="tc"><?php echo $recv['send_date']; ?></td>
           </tr>
         </tbody>
 

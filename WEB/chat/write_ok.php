@@ -6,9 +6,7 @@ if(!isset($_SESSION['login_session'])){
     }
 
 $sql1 = "insert into note(recv_id,send_id,title,content,recv_chk) values('".$_POST['recv_name']."','".$_SESSION['id']."','".$_POST['title']."','".$_POST['content']."','0')";
-#$sql2 = "insert into note(recv_id,send_id,title,content) values('".$_POST['recv_name']."','".$_SESSION['id']."','".$_POST['title']."','".$_POST['content']."')";
 sql_insert($sql1);
-#sql_insert($sql2);
 echo $sql1;
 echo "<script>alert('쪽지를 보냈습니다.'); location.href='note_send.php'; </script>";
 ?>
