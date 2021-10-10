@@ -64,7 +64,7 @@
         $report_img = $_FILES['valuePic'];
         if ($report_img['name'] != '' and isset($report_img['name'])) {
             //기본 업로드 설정 및 확장자 제한
-            $upload_dir = 'assets/r_img';
+            $upload_dir = '/app/assets/r_img';
             $ext_str = "jpg,png,jpeg";
             $allowed_extensions = explode(',', $ext_str);
             $max_file_size = 5242880;
@@ -85,6 +85,7 @@
             $img_name = $report_img['name'] . date('Y-m-d H:i:s', time());
             $img_name = md5($img_name) . "." . $ext;
             move_uploaded_file($report_img['tmp_name'], "{$upload_dir}/{$img_name}");
+            $upload_dir = "assets/r_img";
             $imagepath =  "{$upload_dir}/{$img_name}";
         }
     }
@@ -111,6 +112,6 @@
     } else {
         // 사기 매물 제고 성공 안내 및 리다이렉트
         alert("신고 게시판 글 작성 완료!");
-        redirect("../report.html");
+        redirect("../report.php");
     }
 ?>
