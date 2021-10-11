@@ -73,15 +73,18 @@
         // echo($result);
         $articleid = $result['articleid'];
     } else {
-        // echo mysqli_error($db);
-        // echo("실패..");
-        $articleid = 1;
+        echo mysqli_error($db);
+        echo("실패..");
+        return;
+        // $articleid = 1;
     }
+
+    $articleid += 1;
 
     // 디렉토리 생성
     $dir = '/app/assets/p_img/'.$articleid.'/';
     if (!file_exists($path)) {
-        mkdir($path, 0777, true);
+        mkdir($dir, 0777, true);
     }
 
     // 파일 업로드 진행
@@ -130,38 +133,37 @@
     // $title = $_POST['title'];
     // $body = $_POST['body'];
     // $saleway = intval($_POST['saleway']);
-    $imagepath = $dir;
+    $imagepath = 'assets/p_img/'.$articleid.'/';
 
     // 필요한 유저 정보 가져오기
     $phone = $result['phone'];
     $office = $result['office'];
+    $belong = $result['belong'];
+    $city = $result['city'];
 
 
     // 기본 값 설정 및 데이터 검증
     $status = 0; 
 
     // 이상이 없다면, DB insert
-    // articleid	title	body	price	category	place_sell	saleway	imagepath	uploadtime	id	city	office	phone	status	buyer	qrpath	qrdata						
-                    
+    // articleid	title	body	price	category	place_sell	saleway	imagepath	uploadtime	id	city	office	phone	status	buyer	qrpath	qrdata
+    // articleid	title	body	price	category	place_sell	saleway	imagepath	uploadtime	id	belong	city	office	phone	status	buyer	qrpath	qrdata							
+                  
     $safe_var=array(prevent_sqli($title), prevent_sqli($body), prevent_sqli($price), prevent_sqli($category), prevent_sqli($place_sell), 
-    prevent_sqli($saleway), prevent_sqli($imagepath), prevent_sqli($uploadtime),prevent_sqli($userid), prevent_sqli($hit), prevent_sqli($reply),
-    prevent_sqli($requestTime), prevent_sqli($hit), prevent_sqli($reply),prevent_sqli($requestTime), prevent_sqli($hit), prevent_sqli($reply));
+    prevent_sqli($saleway), prevent_sqli($imagepath), prevent_sqli($uploadtime),prevent_sqli($userid), prevent_sqli($belong), prevent_sqli($city),
+    prevent_sqli($office), prevent_sqli($phone), prevent_sqli($status));
 
     $sql = "INSERT INTO product(`title`, `body`, `price`, `category`, `place_sell`, `saleway`, `imagepath`, `uploadtime`, 
-    `id`, `office`, `phone`, `status`) VALUES ('{$safe_var[0]}', '{$safe_var[1]}', '{$safe_var[2]}', '{$safe_var[3]}', '{$safe_var[4]}', '{$safe_var[5]}', '{$safe_var[6]}', '{$safe_var[7]}', '{$safe_var[8]}'
-    , '{$safe_var[9]}', '{$safe_var[10]}', '{$safe_var[11]}')";
+    `id`, `belong`, `city`, `office`, `phone`, `status`) VALUES ('{$safe_var[0]}', '{$safe_var[1]}', '{$safe_var[2]}', '{$safe_var[3]}', '{$safe_var[4]}', '{$safe_var[5]}', '{$safe_var[6]}', '{$safe_var[7]}', '{$safe_var[8]}'
+    , '{$safe_var[9]}', '{$safe_var[10]}', '{$safe_var[11]}', '{$safe_var[12]}', '{$safe_var[13]}')";
+
     $result = sql_insert($sql);
 
     if (!$result) {
         echo mysqli_error($db);
         echo("작성 실패..");
-        return;
     } else {
         // 사기 매물 제고 성공 안내 및 리다이렉트
         echo("작성 완료!");
-        return;
     }
-
-    */
-
 ?>
