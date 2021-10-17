@@ -38,6 +38,8 @@
         $query = "update report set body_reply='{$safe_var[0]}', reply='{$safe_var[1]}' where idx='{$safe_var[2]}'";
         $result = sql_insert($query);
 
+        alert("답변 완료.");
+
         redirect('../report-contents.php?idx='.$idx);
     }else{
         alertback("작성 권한이 부족합니다..");

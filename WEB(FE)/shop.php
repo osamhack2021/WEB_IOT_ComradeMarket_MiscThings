@@ -31,6 +31,7 @@
 
 <?php
     include_once("/app/modules/common.php");
+    
     // error_reporting(E_ALL);
     // ini_set("display_errors", 1);
 
@@ -51,7 +52,42 @@
 
     if (!$no || $no < 0) $no = 1;
 
-    $sqlCount = "SELECT count(*) FROM product";
+    ################################################################
+    // 유저 $city, $belong 조회
+    @session_start();
+    $secure_id = $_SESSION['id'];
+    $secure_id = prevent_sqli($secure_id);
+    
+    # 게시글 값 가져오기
+    $sql = "SELECT * FROM member where id='{$secure_id}'";
+    $result = sql_select($sql);
+
+    $user_belong = $result['belong'];
+    $user_city = $result['city'];
+
+    
+    ################################################################                      
+    if(!isset($secure_id) or iconv_strlen($secure_id,'utf-8') <= 0){
+        $sqlCount = "SELECT count(*) FROM product";
+    }elseif(isset($city_no)){
+        if($city_no == 0){
+            $sqlCount = "SELECT count(*) FROM product WHERE city=" . $user_city;
+        }elseif($city_no == 1){
+            $sqlCount = "SELECT count(*) FROM product WHERE city!=" . $user_city;
+        }else{
+            $sqlCount = "SELECT count(*) FROM product";
+        }
+    }elseif(isset($belong_no)){
+        if($belong_no == 0){
+            $sqlCount = "SELECT count(*) FROM product WHERE belong=" . $user_belong;
+        }elseif($belong_no == 1){
+            $sqlCount = "SELECT count(*) FROM product WHERE belong!=" . $user_belong;
+        }else{
+            $sqlCount = "SELECT count(*) FROM product";
+        }
+    }else{
+        $sqlCount = "SELECT count(*) FROM product";
+    }
 
     $resultCount = sql_select($sqlCount);
     $totalCount = $resultCount["count(*)"];
@@ -74,8 +110,31 @@
     $beginIdx = prevent_sqli($beginIdx);
     $pageSize = prevent_sqli($pageSize);
 
-    $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+    if(!isset($secure_id) or iconv_strlen($secure_id,'utf-8') <= 0){
+        $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+    }elseif(isset($city_no)){
+        if($city_no == 0){
+            $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product WHERE city=" . $user_city ." ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+        }elseif($city_no == 1){
+            $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product WHERE city!=" . $user_city ." ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+        }else{
+            $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+        }
+    }elseif(isset($belong_no)){
+        if($belong_no == 0){
+            $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product WHERE belong=" . $user_belong ." ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+        }elseif($belong_no == 1){
+            $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product WHERE belong!=" . $user_belong ." ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+        }else{
+            $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+        }
+    }else{
+        $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+    }
+
+    // $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
     $result = sql_insert($sql);
+    // var_dump($result);
 ?>
 
 
@@ -116,9 +175,8 @@
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">소속 도시</a></li>
-                            <li><a class="text-decoration-none" href="#">소속 외 도시</a></li>
-                            <li><a class="text-decoration-none" href="#">전체 출력</a></li>
+                            <li><a class="text-decoration-none" href="<?php echo 'shop.php?city=0' ?>">소속 도시</a></li>
+                            <li><a class="text-decoration-none" href="<?php echo 'shop.php?city=1' ?>">소속 외 도시</a></li>
                         </ul>
                     </li>
                     <li class="pb-3">
@@ -127,8 +185,8 @@
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">부대 내</a></li>
-                            <li><a class="text-decoration-none" href="#">부대 외</a></li>
+                            <li><a class="text-decoration-none" href="<?php echo 'shop.php?belong=0' ?>">부대 내</a></li>
+                            <li><a class="text-decoration-none" href="<?php echo 'shop.php?belong=1' ?>">부대 외</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -187,6 +245,7 @@
                     $area_4["전라도"]		= array("전주","군산","익산","정읍","남원","김제","완주","진안","무주","장수","임실","순창","고창","부안","목포","여수","순천","나주","광양","담양","곡성","구례","고흥","보성","화순","장흥","강진","해남","영암","무안","함평","영광","장성","완도","진도","신안");
                     $area_4["경상도"]		= array("포항","경주","김천","안동","구미","영주","영천","상주","문경","경산","군위","의성","청송","영양","영덕","청도","고령","성주","칠곡","예천","봉화","울진","울릉","창원","진주","통영","사천","김해","밀양","거제","양산","의령","함안","창녕","고성","남해","하동","산청","함양","거창","합천");
                     $area_4["제주특별자치도"]	= array("제주","서귀포");
+
 
                     while ($row = mysqli_fetch_array($result)) {
                         $belong = $row['belong'];
@@ -381,24 +440,48 @@
                             if($startPage >= $pageListSize) {	
                                 $prevList = $startPage - 1;	
                                 # class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0"	
-                                echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$prevList\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";	
+                                if(isset($city_no)){
+                                    echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$prevList$PHP_SELF&city=$city_no\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";	
+                                }elseif(isset($belong_no)){
+                                    echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$prevList$PHP_SELF&belong=$belong_no\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";	
+                                }else{
+                                    echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$prevList\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>";	
+                                }
                             }	
                             for ($i = $startPage; $i <= $endPage; $i++) {	
                                 $page = $pageSize * $i;	
                                 $pageNum = $i;	
                                 	
                                 if ($no == $pageNum) {	
-                                    echo "<li class=\"page-item active\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$pageNum\">";	
+                                    if(isset($city_no)){
+                                        echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$prevList$PHP_SELF&city=$city_no\">";	
+                                    }elseif(isset($belong_no)){
+                                        echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$prevList$PHP_SELF&belong=$belong_no\">";	
+                                    }else{
+                                        echo "<li class=\"page-item active\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$pageNum\">";
+                                    }
                                 }	
                                 else if ($no != $pageNum) {	
-                                    echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$pageNum\">";	
+                                    if(isset($city_no)){
+                                        echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$pageNum$PHP_SELF&city=$city_no\">";
+                                    }elseif(isset($belong_no)){
+                                        echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$pageNum$PHP_SELF&belong=$belong_no\">";
+                                    }else{
+                                        echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$pageNum\">";
+                                    }
                                 }	
                                 echo $pageNum;	
                                 echo "</a></li>";	
                             }	
                             if ($totalPage > $endPage) {	
                                 $nextList = $endPage + 1;	
-                                echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$nextList\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>";	
+                                if(isset($city_no)){
+                                    echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$nextList$PHP_SELF&city=$city_no\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>";	
+                                }elseif(isset($belong_no)){
+                                    echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$nextList$PHP_SELF&belong=$belong_no\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>";	
+                                }else{
+                                    echo "<li class=\"page-item\"><a class=\"page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0\" href=\"$PHP_SELF?no=$nextList\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>";	
+                                }
                             }	
                         
                         ?>

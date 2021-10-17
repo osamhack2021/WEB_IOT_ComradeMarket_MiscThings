@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>전우장터 - 신고 게시판 (글 작성)</title>
+    <title>전우장터 - 문의 게시판 (글 작성)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -140,10 +140,10 @@
     </div>
 
     <div class="d-flex justify-content-center col-xl-12">
-        <form class="d-md-inline-block form-inline navbar-search col-xl-7" action="search_product.do.php" method="POST">
+        <form class="d-md-inline-block form-inline navbar-search col-xl-7" action="shop-search.php" method="GET">
             <br>
             <div class="input-group my-3">
-                <input class="form-control input-lg bg-white border-1" name="search" placeholder="어떤 물건을 찾고 계신가요?" aria-label="Search" aria-describedby="basic-addon2">
+                <input class="form-control input-lg bg-white border-1" name="search" id="search" placeholder="어떤 물건을 찾고 계신가요?" aria-label="Search" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="submit">
                         <i class="fas fa-search fa-sm"></i>

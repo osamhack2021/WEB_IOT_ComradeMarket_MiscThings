@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>전우장터 - 신고 게시판</title>
+    <title>전우장터 - 문의 게시판</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -105,11 +105,8 @@
                 <tr>
                     <th>번호</th>
                     <th>제목</th>
-                    <th>작성일</th>
                     <th>작성자</th>
-                    <th>처리 상태</th>
-                    <th>글 상태</th>
-                    <th>조회수</th>
+                    <th>작성일</th>
                 </tr>
             </thead>
             <tbody>
@@ -134,36 +131,13 @@
                     </td>
                     <td>
                         <?php
-                            $timestamp = $row["date"];
-                            echo date("Y-m-d H:i:s", $timestamp);
-                        ?>
-                    </td>
-                    <td>
-                        <?php
                             echo $row["id"];
                         ?>
                     </td>
                     <td>
                         <?php
-                            if ($row["reply"] == 0) {
-                                echo "답변 대기";                                         
-                            }else{
-                                echo "답변 완료";
-                            }
-                        ?>
-                    </td>
-                    <td>
-                        <?php
-                            if ($row["status"] == 0) {
-                                echo "비밀 글";                                         
-                            }else{
-                                echo "공개 글";
-                            }
-                        ?>
-                    </td>
-                    <td>
-                        <?php
-                            echo $row["hit"];
+                            $timestamp = $row["date"];
+                            echo date("Y-m-d", $timestamp);
                         ?>
                     </td>
                 </tr>

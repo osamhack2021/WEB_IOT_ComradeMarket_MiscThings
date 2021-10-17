@@ -25,16 +25,16 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="index.php">홈</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="about.html">전우장터란?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.php">Shop</a>
+                            <a class="nav-link" href="shop.php">중고장터</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="report.php">Report</a>
+                            <a class="nav-link" href="report.php">문의 게시판</a>
                         </li>
                     </ul>
                 </div>

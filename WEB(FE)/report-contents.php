@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>전우장터 - 신고 글 조회</title>
+    <title>전우장터 - 문의 글 조회</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

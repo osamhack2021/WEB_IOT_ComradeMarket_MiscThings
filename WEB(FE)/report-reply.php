@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>전우장터 - 신고 게시판 (답변)</title>
+    <title>전우장터 - 문의 게시판 (답변)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,9 +35,21 @@
     $secure_id = $_SESSION['id'];
     // $name = $_SESSION['name'];
 
-    if(!isset($aid)){
+    if(!isset($idx)){
         alert("조회에 실패하였습니다.");
         redirect('./report.php');
+    }
+
+    //id 보안처리
+    $secure_id = prevent_sqli($secure_id);
+
+    //쿼리 전송
+    $query = "select * from member where id='{$secure_id}'";
+    $row = sql_select($query);
+
+    // admin 확인
+    if($_SESSION['admin'] != 1 and $row['admin'] != 1){
+        alertback("권한이 부족합니다.");
     }
     
     $idx = prevent_sqli($idx);
@@ -57,6 +69,9 @@
     $titile = $result['title'];
     $id = $result['id'];
     $body = $result['body'];
+
+
+
 ?> 
 
 

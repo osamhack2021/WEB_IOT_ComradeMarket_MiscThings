@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <title>전우장터 - Register</title>
+    <title>전우장터 - 회원가입</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

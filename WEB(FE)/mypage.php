@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <title>전우장터 - Mypage</title>
+    <title>전우장터 - 마이페이지</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,6 +36,8 @@
     if(!isset($secure_id)){
         alertback("id 값을 가져올 수 없습니다..");
     }
+
+    $secure_id = prevent_sqli($secure_id);
     
     # 게시글 값 가져오기
     $sql = "SELECT * FROM member where id='{$secure_id}'";
@@ -219,7 +221,7 @@
                         <button type="button" class="btn btn-success btn-lg" onclick = "location.href = 'chang_email.html'; "> 이메일 변경 </button>
                     </div>
                     <div class="col d-grid">
-                        <button type="button" class="btn btn-success btn-lg" onclick = "location.href = 'mypage/del_user.do.php'; "> 계정 삭제 </button>
+                        <button type="button" class="btn btn-success btn-lg" onclick = "location.href = 'mypage/del_user.do.php'; "> 계정 탈퇴 </button>
                     </div>
                 </div>
             </form>
