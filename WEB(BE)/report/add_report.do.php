@@ -25,7 +25,7 @@
     // $requestTime = $requestTime + 32400;
     
     $requestTime = time();
-    $requestTime = $uploadtime + 32400;
+    $requestTime = $requestTime + 32400;
     
 
     # 작성자 이름 
@@ -116,7 +116,7 @@
         alert("작성 실패..");
     } else {
         // 사기 매물 제고 성공 안내 및 리다이렉트
-        alert("신고 게시판 글 작성 완료!");
+        alert("문의 게시판 글 작성 완료!");
         redirect("../report.php");
     }
 ?>

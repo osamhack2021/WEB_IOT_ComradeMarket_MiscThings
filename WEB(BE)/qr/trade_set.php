@@ -92,7 +92,7 @@
         
         #거래확정 쪽지 insert
         $title = $result1['title']." 상품의 거래가 확정되었습니다.";
-        $content = $_SESSION['id'] . "님과의 거래가 확정되었습니다.   " . 'http://osam.kro.kr/qr_read.php?aid=' . $recv['goods'] . "해당 링크 혹은, 아래의 버튼을 통해 QR 코드를 확인할 수 있습니다.";
+        $content = $_SESSION['id'] . "님과의 거래가 확정되었습니다.   " . 'http://osam.kro.kr/qr_read.php?aid=' . $recv['goods'] . " 해당 링크 혹은, 아래의 버튼을 통해 QR 코드를 확인할 수 있습니다.";
 
         // 거래 확정 메세지 작성
         $sql1 = "insert into note(recv_id,send_id,title,content,recv_chk,goods,sell) values('".$recv['recv_id']."','".$_SESSION['id']."','".$title."','".$content."','0','".$recv['goods']."','1')";

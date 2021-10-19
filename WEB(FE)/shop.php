@@ -338,7 +338,7 @@
                         } elseif($category == 13){
                             $category_str = "생활/가공식품";
                         } elseif($category == 14){
-                            $category_str = "울산광역시";
+                            $category_str = "기타 (ETC)";
                         } else{
                             $category_str = "기타 (ETC)";
                         }

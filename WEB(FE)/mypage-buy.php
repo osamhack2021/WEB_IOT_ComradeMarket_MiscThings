@@ -84,18 +84,18 @@
     }else{
         $status_body = "구매하신 물건은 아래와 같습니다! :)";
         $sql = "SELECT articleid, title, body, price, category, place_sell, saleway, imagepath, uploadtime, id, belong, city, status FROM product where buyer='" . $secure_id ."' ORDER BY uploadtime desc limit ".$beginIdx.",".$pageSize."";
+        
+        $result = sql_insert($sql);
+
+        // 쿼리 조회 결과가 있는지 확인
+        if($result) {
+            // echo($result);
+        } else {
+            // echo mysqli_error($db);
+            alert("실패..");
+        }
+    
     }
-
-    $result = sql_insert($sql);
-
-    // 쿼리 조회 결과가 있는지 확인
-    if($result) {
-        // echo($result);
-    } else {
-        // echo mysqli_error($db);
-        alert("실패..");
-    }
-
 ?>
 
 <body>
@@ -259,7 +259,7 @@
                         } elseif($category == 13){
                             $category_str = "생활/가공식품";
                         } elseif($category == 14){
-                            $category_str = "울산광역시";
+                            $category_str = "기타 (ETC)";
                         } else{
                             $category_str = "기타 (ETC)";
                         }

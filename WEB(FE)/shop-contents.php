@@ -108,9 +108,9 @@
     $area_4["경상도"]		= array("포항","경주","김천","안동","구미","영주","영천","상주","문경","경산","군위","의성","청송","영양","영덕","청도","고령","성주","칠곡","예천","봉화","울진","울릉","창원","진주","통영","사천","김해","밀양","거제","양산","의령","함안","창녕","고성","남해","하동","산청","함양","거창","합천");
     $area_4["제주특별자치도"]	= array("제주","서귀포");
 
-    $belong = $row['belong'];
-    $city = $row['city'];
-    $category = $row['category'];
+    $belong = $result['belong'];
+    $city = $result['city'];
+    $category = $result['category'];
 
     # 값에 따른 문자열 변경
     if($belong >= 100 and $belong < 200){
@@ -168,7 +168,7 @@
     } else{
         $city_str = "제주특별자치도";
     }
-
+    
     if($category == 0){
         $category_str = "의류";
     } elseif($category == 1){
@@ -198,7 +198,7 @@
     } elseif($category == 13){
         $category_str = "생활/가공식품";
     } elseif($category == 14){
-        $category_str = "울산광역시";
+        $category_str = "기타 (ETC)";
     } else{
         $category_str = "기타 (ETC)";
     }
@@ -386,7 +386,7 @@
                                     <h6>카테고리</h6>
                                 </li>
                                 <li class="list-inline-item">
-                                    <p class="text-muted"><strong> <?php echo $category_str; ?> </strong></p>
+                                    <p class="h4 py-2"> <?php echo $category_str; ?> </p>
                                 </li>
                             </ul>
 

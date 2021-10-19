@@ -23,7 +23,6 @@
     # 요청 시간
     $uploadtime = time();
     $uploadtime = $uploadtime + 32400;
-
     # 작성자 이름 
     $userid =  $_SESSION['id'];
 
@@ -73,8 +72,6 @@
         $articleid = $result['articleid'];
     } else {
         echo mysqli_error($db);
-        echo("실패..");
-        return;
         // $articleid = 1;
     }
 
@@ -168,10 +165,11 @@
     , '{$safe_var[9]}', '{$safe_var[10]}', '{$safe_var[11]}', '{$safe_var[12]}', '{$safe_var[13]}')";
 
     $result = sql_insert($sql);
+    echo $sql;
 
     if (!$result) {
         echo mysqli_error($db);
-        echo("작성 실패..");
+        // echo("작성 실패..");
     } else {
         // 사기 매물 제고 성공 안내 및 리다이렉트
         echo("작성 완료!");
