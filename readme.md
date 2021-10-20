@@ -1,15 +1,12 @@
 <p align="center"><img src="/image/logo.png"></p>
 
 <p align="center">
-	(데모 영상)
 	<a href="">
 		<img src="/image/demo_video.png" />
 	</a>
-	(데모)
 	<a href="">
 		<img src="/image/demo_button.png" />
 	</a>
-	(매뉴얼)
 	<a href="">
 		<img src="/image/document_button.png" />
 	</a>
@@ -73,13 +70,13 @@
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/user0.png"><img src="/image/user0.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/user0.png"><img src="/image/user0.png" width="60%" height="60%"></a></div></td>
         </tr>
 		<tr>
             <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user1.png"><img src="/image/user1.png" width="60%" height="60%"></a></div></td>
         </tr>
         <tr>
-            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user2.png"><img src="/image/user2.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user2.png"><img src="/image/user2.png" width="60%" height="60%"></a></div></td>
         </tr>
 		<tr>
             <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user3.png"><img src="/image/user3.png" width="60%" height="60%"></a></div></td>
