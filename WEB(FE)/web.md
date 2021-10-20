@@ -11,32 +11,49 @@
 프론트엔드 파트는 아래와 같은 파일들로 구성되어있습니다.
 
 about.html : 소개 페이지와 관련된 파일입니다.
+
 chang_email.html : 이메일 변경시 사용되는 파일입니다.
+
 chang_pw.html : 비밀번호 변경시 사용되는 파일입니다.
+
 del_user.html : 탈퇴 신청시 사용되는 파일입니다. 
+
 find_id.html : 아이디를 찾을때 사용되는 파일입니다.
+
 find_pw.html : 비밀번호를 찾을때 사용되는 파일입니다.
+
 login.html : 로그인시 사용되는 파일입니다.
 
 footer.php : 푸터 부분 출력시 사용되는 파일입니다. 
+
 header.php : 헤더 부분 출력시 사용되는 파일입니다. 
+
 index.php : 메인 페이지와 관련된 파일입니다.
 
 letter-contents.php : 쪽지 내용을 출력하는 페이지와 관련된 파일입니다.
+
 letter-recv.php / letter-send.php : 받은 쪽지와, 보낸 쪽지를 확인할 수 있는 페이지와 관련된 페이지입니다.
 
 mypage-admin.php : 어드민 기능들을 활용할시 사용되는 파일입니다.
+
 mypage-buy.php : 자신이 구매하는 물건 리스트를 출력할시 사용되는 파일입니다.
+
 mypage-sell.php : 자신이 판매하는 물건 리스트를 출력할시 사용되는 파일입니다.
+
 mypage.php : 마이페이지 조회시 사용되는 파일입니다.
 
 qr_read.php : qr 이미지를 읽을 때 사용되는 파일입니다.
 
 report-contents.php : 문의 내용을 조회할 시 사용되는 파일입니다.
+
 report-new.php : 새로운 문의를 남길 경우 사용되는 파일입니다.
+
 report-reply.php : 문의 답변을 진행할때 사용되는 파일입니다.
 
 shop-contents.php : 상품을 조회할때 사용되는 파일입니다.
+
 shop-new.php : 신규 상품을 등록할때 사용되는 파일입니다.
+
 shop-search.php : 상품 내에서 검색을 진행할 경우 사용되는 파일입니다.
+
 shop.php : 상품을 출력하는 메인 페이지와 관련된 파일입니다.
