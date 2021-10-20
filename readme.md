@@ -1,7 +1,7 @@
 <p align="center"><img src="/image/logo.png"></p>
 
 <p align="center">
-	<a href="https://youtu.be/L8y6Q34LATA">
+	<a href="https://youtu.be/eRFL85RCMiI">
 		<img src="/image/demo_video.png" />
 	</a>
 	<a href="http://osam.kro.kr/">
@@ -308,13 +308,60 @@ QR 코드를 이용하여, 판매자는 보관함에 자신이 판매한 물건�
 발급된 QR을 이용하여, 보관함 서비스 사용 가능.
 
 ## 프로젝트 사용법 (Getting Started)
-** 진행 중.. **
+
+<p>step0. 필요한 리소스를 먼저 다운로드합니다. </p>
+https://drive.google.com/drive/folders/1y6dcVsuLOuPf47wDR73qHvMIthruzdZE?usp=sharing
+
+<p>step1. 도커를 load 해줍니다. </p>
 
 ```bash
-$ git clone git주소
-$ yarn or npm install
-$ yarn start or npm run start
+$ docker load -i docker-backup.tar
 ```
+<br>
+<p>step2. 도커 볼륨을 아래의 명령어를 통해 제작해줍니다. </p>
+
+```bash
+// 도커 볼륨 생성
+$ docker volume create osam-data
+$ docker volume create osam-mysql
+```
+<br>
+<p>step3. docker를 동작시킵니다. </p>
+
+```bash
+// 도커 동작
+$ docker run -d --name=osam -p 80:80 -p 3306:3306 -p 8080:8080 -p 22:22 -p 8000:8443 -v osam data:/app -v osam-mysql:/var/lib/mysql docker-backup
+```
+
+<br>
+<p>step4. mysql과 관련된 설정을 진행합니다. </p>
+
+```bash
+// mysql 관련 
+$ mysql -u root
+$ use mysql;
+$ alter user 'root'@'localhost' identified with mysql_native_password by 'password';
+$ flush privileges;
+```
+
+<br>
+<p>step5. phpmyadmin을 이용해 DB에 필요한 정보를 넣어줍니다.</p>
+
+```bash
+http://localhost/phpmyadmin
+$ login and create db osam
+$ create table → osam.sql
+```
+<br>
+<p>step6. git clone을 통해, 필요한 코드들을 받아옵니다.</p>
+
+```bash
+http://localhost/phpmyadmin
+$ cd /app
+$ git clone https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings.git
+```
+<br>
+
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
 
