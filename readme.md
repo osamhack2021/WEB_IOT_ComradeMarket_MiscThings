@@ -1,5 +1,6 @@
 <p align="center"><img src="/image/logo.png"></p>
 
+<!--
 <p align="center">
 	(데모 영상)
 	<a href="">
@@ -14,6 +15,7 @@
 		<img src="/image/document_button.png" />
 	</a>
 </p>
+-->
 
 <p align="center">
 	<a href="https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/osamhack2021/WEB_IOT_ComradeMarket_MiscThings"></a>
@@ -164,7 +166,7 @@ QR 코드를 이용하여, 판매자는 보관함에 자신이 판매한 물건�
 	</thead>
 	<tbody>
 		<tr>
-			<td width="100" align="center"><img src="/image/PROFILE1.png" width="60" height="60"></td>
+			<td width="100" align="center"><img src="/image/PROFILE1.jpg" width="60" height="60"></td>
 			<td width="100" align="center">이창엽</td>
 			<td width="150">프론트엔드 개발<br>백엔드 개발<br>문서화 작업 등</td>
 			<td width="100" align="center">
@@ -177,7 +179,7 @@ QR 코드를 이용하여, 판매자는 보관함에 자신이 판매한 물건�
 			</td>
 		</tr>
 		<tr>
-			<td width="100" align="center"><img src="/image/PROFILE2.png" width="60" height="60"></td>
+			<td width="100" align="center"><img src="/image/PROFILE2.jpg" width="60" height="60"></td>
 			<td width="100" align="center">이진우</td>
 			<td width="300">백엔드 개발<br>IOT 개발<br>영상 작업 등</td>
 			<td width="100" align="center">
