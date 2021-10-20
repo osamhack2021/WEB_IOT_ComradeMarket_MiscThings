@@ -184,7 +184,7 @@ QR 코드를 이용하여, 판매자는 보관함에 자신이 판매한 물건�
 			<td width="300">백엔드 개발<br>IOT 개발<br>영상 작업 등</td>
 			<td width="100" align="center">
 				<a href="https://github.com/Solrukas">
-					<img src="http://img.shields.io/badge/LiiNen-655ced?style=social&logo=github"/>
+					<img src="http://img.shields.io/badge/Solrukas-655ced?style=social&logo=github"/>
 				</a>
 			</td>
 			<td width="175" align="center">
