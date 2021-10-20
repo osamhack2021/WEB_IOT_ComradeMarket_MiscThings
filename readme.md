@@ -1,7 +1,7 @@
 <p align="center"><img src="/image/logo.png"></p>
 
 <p align="center">
-	<a href="">
+	<a href="https://youtu.be/L8y6Q34LATA">
 		<img src="/image/demo_video.png" />
 	</a>
 	<a href="http://osam.kro.kr/">
