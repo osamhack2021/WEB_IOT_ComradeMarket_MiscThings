@@ -19,3 +19,10 @@ do
         echo "done : " $item
     fi
 done
+
+query="ALTER USER 'root'@'localhost' IDENTIFIED BY 'P@ssW0rd2316';";
+mysql -uroot -D mysql -e "${query}";
+
+query2="create database osam;";
+mysql -uroot -pP@ssW0rd2316 -e "${query}";
+mysql -uroot -pP@ssW0rd2316 osam < osam.sql
