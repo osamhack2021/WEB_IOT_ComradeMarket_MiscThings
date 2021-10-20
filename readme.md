@@ -334,27 +334,7 @@ $ docker run -d --name=osam -p 80:80 -p 3306:3306 -p 8080:8080 -p 22:22 -p 8000:
 ```
 
 <br>
-<p>step4. mysql과 관련된 설정을 진행합니다. </p>
-
-```bash
-// mysql 관련 
-$ mysql -u root
-$ use mysql;
-$ alter user 'root'@'localhost' identified with mysql_native_password by 'password';
-$ flush privileges;
-```
-
-<br>
-<p>step5. phpmyadmin을 이용해 DB에 필요한 정보를 넣어줍니다.</p>
-
-```bash
-http://localhost/phpmyadmin
-
-login and create db osam
-create table → osam.sql
-```
-<br>
-<p>step6. git clone을 통해, 필요한 코드들을 받아온 후 설정을 진행합니다. </p>
+<p>step4. git clone을 통해, 필요한 코드들을 받아온 후 설정을 진행합니다. </p>
 
 ```bash
 $ cd /app
