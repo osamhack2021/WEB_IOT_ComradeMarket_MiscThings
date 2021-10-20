@@ -1,6 +1,5 @@
 <p align="center"><img src="/image/logo.png"></p>
 
-<!--
 <p align="center">
 	(데모 영상)
 	<a href="">
@@ -15,7 +14,7 @@
 		<img src="/image/document_button.png" />
 	</a>
 </p>
--->
+
 
 <p align="center">
 	<a href="https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/osamhack2021/WEB_IOT_ComradeMarket_MiscThings"></a>
@@ -64,6 +63,30 @@
 
 - 로그인, 로그아웃, 회원가입, 아이디 찾기, 비밀번호 임시 발급, 비밀번호 변경, 이메일 변경, 마이페이지 기능 제공
 
+<table>
+        <tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b> 유저 관련 기능 </b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/user0.png"><img src="/image/user0.png" width="60%" height="60%"></a></div></td>
+        </tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user1.png"><img src="/image/user1.png" width="60%" height="60%"></a></div></td>
+        </tr>
+        <tr>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user2.png"><img src="/image/user2.png" width="60%" height="60%"></a></div></td>
+        </tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user3.png"><img src="/image/user3.png" width="60%" height="60%"></a></div></td>
+        </tr>
+   </tbody>
+</table>
+
 ### 상품 관련 기능 (물품 거래 관련)
 
 - 상품 등록, 삭제, 상품 검색, 상품 조회, 상품 필터링 (부대 도시 및 소속 단위), 유저 등록 및 구매 상품 조회 기능 제공
@@ -80,6 +103,8 @@
 
 - 유저, 상품, 문의, 쪽지 기능들을 제공하기 위해 설계된 DB 스키마 정보입니다.
 
+<p align="center"><img src="/image/DB.png"></p>
+
 ## 보관함 (IOT)
 
 보관함 (IOT) 파트를 진행하면서, 실제 아두이노 및 키트를 부대 내에 반입하기에는 보안상의 문제가 있었기에, 대신하여 TINKERCAD를 이용하여 아두이노를 구성한 후, 테스트 코드를 작성하여 진행하였습니다.
@@ -91,10 +116,15 @@
 웹사이트 거래를 통해 발급된 Qr를 이용하여, 해당 보관함을 이용할 수 있으며, 물건에 대한 QR은 물건당 1개가 발급되며, 이는 구매자 및 판매자 모두 확인할 수 있습니다. 
 
 - 보관함 플로우 차트
+<p align="center"><img src="/image/OSAM-IOT.png"></p>
 
 - 아두이노 키트 및 실제 모의 동작 화면
+<p align="center"><img src="/image/QR_Code.png"></p>
+<p align="center"><img src="/image/QR_Code2.png"></p>
 
 ## 플랫폼 거래과정
+<p align="center"><img src="/image/OSAM-WEB.png"></p>
+
 전우장터의 거래과정은 위 플로우 차트 이미지와 동일합니다.
 
 1. 중고 물품 판매를 원하는 판매자가 상품을 업로드합니다.
@@ -111,9 +141,10 @@ QR 코드를 이용하여, 판매자는 보관함에 자신이 판매한 물건�
 ## 플랫폼 플로우 차트 & 기능 리스트
 
 ### 플랫폼 기능 리스트 (트리)
+<p align="center"><img src="/image/OSAM-function.png"></p>
 
 ### 플랫폼 플로우 차트
-
+<p align="center"><img src="/image/OSAM-platform.png"></p>
 
  
 # 전우장터 기대효과
@@ -202,7 +233,7 @@ QR 코드를 이용하여, 판매자는 보관함에 자신이 판매한 물건�
 * 주의 : Internet Explorer 8.0 이하 버전 (일부 기능 지원 불가)
 
 ## 기술 스택 (Technique Used)
-
+<p align="center"><img src="/image/platform.png"></p>
 
 ### Front-end
  -  HTML & CSS, Javascript 
