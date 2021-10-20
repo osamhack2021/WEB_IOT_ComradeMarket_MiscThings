@@ -4,10 +4,10 @@
 	<a href="">
 		<img src="/image/demo_video.png" />
 	</a>
-	<a href="">
+	<a href="http://osam.kro.kr/">
 		<img src="/image/demo_button.png" />
 	</a>
-	<a href="">
+	<a href="https://yeopeva.notion.site/OSAM-2021-f8894bedf2a549518f1232da6160d470">
 		<img src="/image/document_button.png" />
 	</a>
 </p>
@@ -98,13 +98,13 @@
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop0.png"><img src="/image/shop0.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop0.png"><img src="/image/shop0.png" width="60%" height="60%"></a></div></td>
         </tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop1.png"><img src="/image/shop1.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop1.png"><img src="/image/shop1.png" width="60%" height="60%"></a></div></td>
         </tr>
         <tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop2.png"><img src="/image/shop2.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop2.png"><img src="/image/shop2.png" width="60%" height="60%"></a></div></td>
         </tr>
    </tbody>
 </table>
@@ -123,13 +123,13 @@
 			</td>
 		</tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact0.png"><img src="/image/contact0.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact0.png"><img src="/image/contact0.png" width="60%" height="60%"></a></div></td>
         </tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact1.png"><img src="/image/contact1.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact1.png"><img src="/image/contact1.png" width="60%" height="60%"></a></div></td>
         </tr>
         <tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact2.png"><img src="/image/contact2.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="1"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact2.png"><img src="/image/contact2.png" width="60%" height="60%"></a></div></td>
         </tr>
    </tbody>
 </table>
@@ -143,7 +143,7 @@
 		<tr>
 			<td colspan=2>
 				<br>
-				<b> 문의 관련 기능 </b><br>
+				<b> 운영자 관련 기능 </b><br>
 				<br>
 			</td>
 		</tr>
