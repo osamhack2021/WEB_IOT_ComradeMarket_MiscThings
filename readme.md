@@ -73,13 +73,13 @@
             <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/user0.png"><img src="/image/user0.png" width="60%" height="60%"></a></div></td>
         </tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user1.png"><img src="/image/user1.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/user1.png"><img src="/image/user1.png" width="60%" height="60%"></a></div></td>
         </tr>
         <tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user2.png"><img src="/image/user2.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/user2.png"><img src="/image/user2.png" width="60%" height="60%"></a></div></td>
         </tr>
 		<tr>
-            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2020/WEB_KookbangFriends_Woowahan/master/image/user3.png"><img src="/image/user3.png" width="60%" height="60%"></a></div></td>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/user3.png"><img src="/image/user3.png" width="60%" height="60%"></a></div></td>
         </tr>
    </tbody>
 </table>
@@ -88,13 +88,74 @@
 
 - 상품 등록, 삭제, 상품 검색, 상품 조회, 상품 필터링 (부대 도시 및 소속 단위), 유저 등록 및 구매 상품 조회 기능 제공
 
+<table>
+        <tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b> 상품 관련 기능 </b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop0.png"><img src="/image/shop0.png" width="60%" height="60%"></a></div></td>
+        </tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop1.png"><img src="/image/shop1.png" width="60%" height="60%"></a></div></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/shop2.png"><img src="/image/shop2.png" width="60%" height="60%"></a></div></td>
+        </tr>
+   </tbody>
+</table>
+
 ### 문의 관련 기능
 
 - 문의 글 작성 (비밀 / 공개), 문의 글 삭제, 문의 글 조회, 문의 글 답변 기능 제공
 
+<table>
+        <tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b> 문의 관련 기능 </b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact0.png"><img src="/image/contact0.png" width="60%" height="60%"></a></div></td>
+        </tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact1.png"><img src="/image/contact1.png" width="60%" height="60%"></a></div></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/contact2.png"><img src="/image/contact2.png" width="60%" height="60%"></a></div></td>
+        </tr>
+   </tbody>
+</table>
+
 ### 운영자 관련 기능
 
 - 상품 삭제, 유저 삭제, 운영자 권한 부여 기능 제공
+
+<table>
+        <tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b> 문의 관련 기능 </b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/admin0.png"><img src="/image/admin0.png" width="60%" height="60%"></a></div></td>
+        </tr>
+		<tr>
+            <td rowspan="2"><div align="center"><a href="https://raw.githubusercontent.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/master/image/admin1.png"><img src="/image/admin1.png" width="60%" height="60%"></a></div></td>
+        </tr>
+   </tbody>
+</table>
+
 
 ### DB 스키마
 
