@@ -19,13 +19,6 @@
 	<a href="https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/WEB_IOT_ComradeMarket_MiscThings"></a>
 </p>
 
-## Index
-  - [프로젝트 소개](#프로젝트 소개) 
-  - [기능 설명](#기능 설명)
-  - [전우장터 기대효과](#전우장터 기대효과)
-  - [팀 소개 & 개발자 소개](#팀 소개 & 개발자 소개)
-  - [프로젝트 사용법](#프로젝트 사용법 (Getting Started))
-
 
 # 프로젝트 소개
 
