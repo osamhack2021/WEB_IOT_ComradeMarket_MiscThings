@@ -294,8 +294,7 @@ QR 코드를 이용하여, 판매자는 보관함에 자신이 판매한 물건�
 <p align="center"><img src="/image/platform.png"></p>
 
 ### Front-end
- -  HTML & CSS, Javascript 
- -  UI framework
+ -  HTML5 & CSS3, Javascript 
 
 ### Server(back-end)
  - Apache2, PHP, Mysql, Docker 
