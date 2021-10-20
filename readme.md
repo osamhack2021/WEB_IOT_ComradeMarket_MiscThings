@@ -354,12 +354,14 @@ login and create db osam
 create table → osam.sql
 ```
 <br>
-<p>step6. git clone을 통해, 필요한 코드들을 받아옵니다.</p>
+<p>step6. git clone을 통해, 필요한 코드들을 받아온 후 설정을 진행합니다. </p>
 
 ```bash
 http://localhost/phpmyadmin
 $ cd /app
 $ git clone https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings.git
+$ chmod +x install.sh 
+$ ./install.sh
 ```
 <br>
 
