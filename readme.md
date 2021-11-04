@@ -16,7 +16,7 @@
 <p align="center">
 	<a href="https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/osamhack2021/WEB_IOT_ComradeMarket_MiscThings"></a>
 	<a href="https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/blob/master/LICENSE"><img alt="GitHub forks" src="https://img.shields.io/github/forks/osamhack2021/WEB_IOT_ComradeMarket_MiscThings"></a>
-	<a href="https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/WEB_IOT_ComradeMarket_MiscThings"></a>
+	<a href="https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/blob/master/license.md"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/WEB_IOT_ComradeMarket_MiscThings"></a>
 </p>
 
 
