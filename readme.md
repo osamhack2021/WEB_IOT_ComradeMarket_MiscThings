@@ -347,6 +347,6 @@ $ ./install.sh
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [LGPL 3.0](https://github.com/osamhack2021/WEB_IOT_ComradeMarket_MiscThings/blob/master/license.md)
 
+#### 사용된 오픈소스 
  * [PHP QR Code](http://phpqrcode.sourceforge.net/)
-
-  * [Zay Shop Template](https://templatemo.com/tm-559-zay-shop)
+ * [Zay Shop Template](https://templatemo.com/tm-559-zay-shop)
